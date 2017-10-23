@@ -1,0 +1,13 @@
+<attach event="onblur" onevent="getblur()"/>
+<attach event="onfocus" onevent="getfocus()"/>
+<script language="Javascript">
+function getblur(){
+	style.backgroundColor="#F3F3F3";
+	style.color="#000000";
+}
+
+function getfocus(){
+	style.backgroundColor="#e0f2ff";
+	style.color="#FF3300";
+}
+</script>

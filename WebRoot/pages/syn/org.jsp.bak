@@ -1,0 +1,84 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="/WEB-INF/tlds/c.tld" prefix="c"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>组织列表</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link rel="stylesheet"
+	href="${root}/themes/zTree/css/zTreeStyle/zTreeStyle.css"
+	type="text/css">
+<%@include file="../admin/include/style.jsp"%>
+</head>
+<div class="page-content" style="height: 500px">
+	<div class="span3" style="height: 450px;overflow-y:auto;" >
+						<div class="portlet box green" >
+							<div class="portlet-title">
+								<div class="caption">
+									<i class="icon-list"></i>组织同步
+								</div>
+							</div>
+							<div class="portlet-body">
+							<ul id="treeOrg" style="font-weight: bold" class="ztree"></ul>
+							</div>
+						</div>
+	</div>
+	<div align="center">
+	<button type="button" onclick="synOrg()" class="btn green">
+			<i>确&nbsp;&nbsp;定</i>
+	</button>
+	<button type="button" onclick="window.close();" class="btn red">
+			<i>关&nbsp;&nbsp;闭</i>
+	</button>
+	<div>
+</div>
+	<script type="text/javascript" src="${root}/themes/zTree/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript"
+	src="${root}/themes/zTree/js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript"
+	src="${root}/themes/zTree/js/jquery.ztree.excheck-3.5.js"></script>
+	<SCRIPT type="text/javascript">
+	var setting = {
+			check: {
+				enable: true,
+				chkStyle: "radio",
+				radioType: "level"
+			},
+			async: {
+				enable: true,
+				url:"${root}/syn/loadSonOrg?appId=${appId}",
+				autoParam:["id=orgid"]
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+	};
+
+	var zNodes =${orgStr};
+	$(document).ready(function(){
+		$.fn.zTree.init($("#treeOrg"), setting, zNodes);
+	});
+	function synOrg(){
+		var treeObj=$.fn.zTree.getZTreeObj("treeOrg");
+        nodes=treeObj.getCheckedNodes(true);
+        var orgIds="";
+        for(var i=0;i<nodes.length;i++){
+        		orgIds+=nodes[i].id + ",";
+        }
+        window.dialogArguments.location.href="${root}/syn/synCreateOrg?appId=${appId}&orgIds="+orgIds;
+        window.close();
+	}
+</SCRIPT>
+</html>

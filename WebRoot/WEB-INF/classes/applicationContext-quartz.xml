@@ -1,0 +1,63 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+	">
+    <bean id="siteInfoMonitor" class="com.dm.ais.schedule.SiteInfoMonitor" />
+	<!-- Spring Quartz -->
+	<bean id="siteSchedule"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		  <property name="targetObject" ref="siteInfoMonitor" />
+		  <property name="targetMethod" value="monitor" />
+		 
+		  <!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->
+	</bean>
+    <bean id="gridSchedule"
+		  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		  <property name="targetObject" ref="siteInfoMonitor" />
+		  <property name="targetMethod" value="gridLoad" />
+		  
+		  <!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->
+	</bean>
+ 
+ 
+	<!-- 
+	<bean id="runMeJob" 
+            class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
+		<property name="targetObject" ref="runMeTask" /> 
+		<property name="targetMethod" value="printMe" /> 
+	</bean> 
+	-->
+ 
+	<!-- Simple Trigger, run every 5 seconds -->
+	<bean id="siteTrigger" 
+                class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+ 
+		<property name="jobDetail" ref="siteSchedule" />
+		<property name="startDelay" value="10" />
+		<property name="repeatInterval" value="900000" /> 
+	</bean>
+	
+	<bean id="gridTrigger" 
+                class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+ 
+		<property name="jobDetail" ref="gridSchedule" />
+		<property name="startDelay" value="10" />
+		<property name="repeatInterval" value="1800000" /> 
+ 
+	</bean>
+ 
+ <!-- 
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="siteTrigger" />
+				<ref bean="gridTrigger" />
+			</list>	
+		</property>
+		<property name="startupDelay" value="0"></property>
+	</bean>
+  -->
+</beans>

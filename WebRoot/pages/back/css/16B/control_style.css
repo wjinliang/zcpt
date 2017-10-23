@@ -1,0 +1,30 @@
+@charset "utf-8";
+body{
+	margin:0px;
+	background:url(../../images/16B/bg_arrow_left.png) repeat-x;
+	font-size:12px;
+}
+
+table{
+	font-size:12px;
+}
+
+div{
+	font-size:12px;
+}
+.conArrowRight{
+	background-image:url(../../images/16B/bg_arrow_right.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	cursor:hand;
+	width:12px;
+}
+
+.conArrowLeft{
+	background-image:url(../../images/16B/bg_arrow_left.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	cursor:hand;	
+	width:12px;
+}
+img{cursor:pointer;}

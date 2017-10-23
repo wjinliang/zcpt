@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H+ 后台主题UI框架 - 主页</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link href="/DM/themes/hplus/css/bootstrap.min.css?v=1.7" rel="stylesheet">
+    <link href="/DM/themes/font-awesome//hplus/css/font-awesome.css?v=1.7" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="/DM/themes/hplus/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="/DM/themes/hplus/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+	<link href="/DM/themes/hplus/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+    <link href="/DM/themes/hplus/css/animate.css" rel="stylesheet">
+    <link href="/DM/themes/hplus/css/style.css?v=1.7" rel="stylesheet">
+
+	<link href="/DM/themes/hplus/css/plugins/iCheck/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Beaut-zihan</strong>
+                             </span>  <span class="text-muted text-xs block">超级管理员 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="form_avatar.html">修改头像</a>
+                                </li>
+                                <li><a href="profile.html">个人资料</a>
+                                </li>
+                                <li><a href="contacts.html">联系我们</a>
+                                </li>
+                                <li><a href="mailbox.html">信箱</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            H+
+                        </div>
+                    </li>                  
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+                <div class="row">
+                    <div id="example_table" class="col-lg-12">
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="/DM/themes/hplus/js/jquery-2.1.1.min.js"></script>
+
+	<script src="/DM/themes/hplus/js/bootstrap.min.js?v=1.7"></script>
+
+	<script src="/DM/themes/hplus/js/hitworth/menu-init.js"></script>
+	<script>
+		var menus=[{ id:1, pId:0, name:"pNode 1",url:'#'},
+			{ id:11, pId:1, name:"pNode 11",url:'#'},
+			{ id:111, pId:11, name:"leaf node 111",url:'#'},
+			{ id:112, pId:11, name:"leaf node 112",url:'#'},
+			{ id:113, pId:11, name:"leaf node 113",url:'#'},
+			{ id:114, pId:11, name:"leaf node 114",url:'#'},
+			{ id:12, pId:1, name:"pNode 12",url:'#'},
+			{ id:121, pId:12, name:"leaf node 121",url:'#'},
+			{ id:122, pId:12, name:"leaf node 122",url:'#'},
+			{ id:123, pId:12, name:"leaf node 123",url:'#'},
+			{ id:124, pId:12, name:"leaf node 124",url:'#'},
+			{ id:13, pId:1, name:"pNode 13 - no child",url:'#'},
+			{ id:2, pId:0, name:"pNode 2",url:'#'},
+			{ id:21, pId:2, name:"pNode 21",url:'#'},
+			{ id:211, pId:21, name:"leaf node 211",url:'#'},
+			{ id:212, pId:21, name:"leaf node 212",url:'#'},
+			{ id:213, pId:21, name:"leaf node 213",url:'#'},
+			{ id:214, pId:21, name:"leaf node 214",url:'#'},
+			{ id:22, pId:2, name:"pNode 22",url:'#'},
+			{ id:221, pId:22, name:"leaf node 221",url:'#'},
+			{ id:222, pId:22, name:"leaf node 222",url:'#'},
+			{ id:223, pId:22, name:"leaf node 223",url:'#'},
+			{ id:224, pId:22, name:"leaf node 224",url:'#'},
+			{ id:23, pId:2, name:"pNode 23",url:'#'},
+			{ id:231, pId:23, name:"leaf node 231",url:'#'},
+			{ id:232, pId:23, name:"leaf node 232",url:'#'},
+			{ id:233, pId:23, name:"leaf node 233",url:'#'},
+			{ id:234, pId:23, name:"leaf node 234",url:'#'}];
+	
+	
+		$(document).ready(function(){
+			Menu.init(menus);
+			
+		});
+	</script>
+
+   
+    <script src="/DM/themes/hplus/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/DM/themes/hplus/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+
+	 <script src="/DM/themes/hplus/js/plugins/jeditable/jquery.jeditable.js"></script>
+
+    <!-- Data Tables -->
+    <script src="/DM/themes/hplus/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/DM/themes/hplus/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+	
+
+    <script src="/DM/themes/hplus/js/hplus.js?v=1.7"></script>
+    <script src="/DM/themes/hplus/js/plugins/pace/pace.min.js"></script>
+	<script src="/DM/themes/hplus/js/plugins/iCheck/icheck.min.js"></script>
+	<script src="/DM/themes/hplus/js/hitworth/hw.grid.js" charset="UTF-8"></script>
+	<script>
+
+
+		// Examle data for jqGrid
+            var mydata ={
+				data : [
+                {
+                    id: "1",
+                    invdate: "2010-05-24",
+                    name: "test",
+                    note: "note",
+                    tax: "10.00",
+                    total: "2111.00"
+                },
+                {
+                    id: "2",
+                    invdate: "2010-05-25",
+                    name: "test2",
+                    note: "note2",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "3",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "4",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "5",
+                    invdate: "2007-10-05",
+                    name: "test2",
+                    note: "note2",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "6",
+                    invdate: "2007-09-06",
+                    name: "test3",
+                    note: "note3",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "7",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "8",
+                    invdate: "2007-10-03",
+                    name: "test2",
+                    note: "note2",
+                   
+                    tax: "21.00",
+                    total: "320.00"
+                },
+                {
+                    id: "9",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                  
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "10",
+                    invdate: "2007-10-01",
+                    name: "test",
+                    note: "note",                  
+                    tax: "10.00",
+                    total: "210.00"
+                }],
+				thispage : 1,
+				totalcount : 39
+			};
+
+			var cloums = [
+				{
+					title : "名称",
+					filed : "name"
+				},{
+					title : "日期",
+					filed : "createTime"
+				},{
+					title : "创建者",
+					filed : "creator"
+				}
+			];
+
+			var setting = {
+				url : 'http://127.0.0.1:8080/DM/example/json',
+				thispage : 1,
+				pagesize : 5,
+				id_filed : 'id',
+				show_check : true
+			};
+		
+		var options = {
+			box : {
+			title : "表格",
+			tools : {
+				collapse : true,
+				close : true
+			},
+			buttons : 
+			[{
+				text : "添加",
+				handle : function(){
+					alert("点击了添加！");
+				}
+			},
+			{
+				text : "编辑",
+				handle : function(){
+					alert("点击了编辑！");
+				}
+			}]
+			},
+			cloums : cloums,
+			url : "http://127.0.0.1:8080/DM/example/json", // ajax地址
+			page : 1,
+			pagesize : 5,
+			id_filed : "id",
+			show_check : true
+		}
+		var grid;
+        $(document).ready(function () {           	
+			grid = $("#example_table").HwGrid(options);
+        });
+		function getCheckedIds(){
+			alert(grid.currentCheckeds());
+		}
+	</script>
+    
+</body>
+
+</html>

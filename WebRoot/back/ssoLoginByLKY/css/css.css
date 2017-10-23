@@ -1,0 +1,40 @@
+@charset "utf-8";
+a{text-decoration:none;}
+*{margin:0; padding:0;}
+div,ul,li,table,td,input,dl,dt,dd,form,h1,h2,h3,h4,h5,span{margin:0; padding:0;}
+img{border:0; vertical-align:bottom;}
+ul li{list-style:none; padding:0; margin:0;}
+
+div.sdmenu {
+	width: 175px; font-size:14px; font-weight:bold; color:#142a56;}
+div.sdmenu div  {
+	background: url(images/menu_bg_hover.jpg) no-repeat;overflow: hidden;}
+* html div.sdmenu div{
+    float:left;}
+div.sdmenu div.collapsed {
+	height: 32px;}
+/*菜单的选中状态样式*/
+div.sdmenu div span {
+	display: block;line-height:38px;width:160px;font-weight: bold;color: #FFF;cursor: pointer;_margin-left:0px;background:#f48c0f; text-align:left; padding-left:15px; font-size:14px;}
+	
+div.sdmenu div span a{
+    padding:0; background:none; border:0; font-size:14px;line-height:38px;display:block}
+div.sdmenu div.collapsed {
+	background: url(menu_bg.jpg) no-repeat; width:175px; color:#142a56}
+/*菜单的原有默认状态样式*/
+div.sdmenu div.collapsed span{
+    color:#142a56; line-height:27px ; background:url(images/menu_bg_hover2.jpg) no-repeat;}
+	
+div.sdmenu div.collapsed span a.current{
+    color:#142a56;}
+div.sdmenu div a {
+	padding-left:30px; display: block; border-bottom: 1px solid #fff;color: #2175c3;font-size:12px; background:url(images/menu_sub_icon.jpg) no-repeat;line-height:27px; font-weight:normal; width:145px; text-align:left;}
+/*二级下拉菜单样式*/	
+div.sdmenu div a.current {
+	line-height:27px; font-weight:normal; color:#2c83d3;}
+div.sdmenu div span a.current {
+	color:#fff;background : url(images/menu_sub_icon.gif) no-repeat  27px 7px #cee5fb;}
+div.sdmenu div a:hover {
+	background : url(images/menu_sub_icon.gif) no-repeat  27px 7px #cee5fb;text-decoration: none;}
+div.sdmenu div span a:hover {
+	background:none;}

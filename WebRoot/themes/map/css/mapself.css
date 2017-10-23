@@ -1,0 +1,187 @@
+@CHARSET "UTF-8";
+ 	body{
+	        padding: 0;
+	        margin: 0;
+	    }
+	    .numberMarker{
+             background:transparent;
+             font-weight: bold;
+             color:black;
+             text-shadow:1px 2px 1px #fff; 
+	        }
+	    .dropdown-menu li{
+            font-size: 10pt;      
+	    } 
+	    
+	    .deleteSave {
+	    	display: none;
+	    }
+	    
+	    .navbar-default {
+   			 background-color: #f8f8f8;
+    		 border-color: #ADADAD;
+    		 box-shadow: 1px 1px 1px #888888;
+          }
+
+	    .markerIcon
+	    {
+	    	background: transparent;
+	    	width: 60px;
+	    }
+        form{
+        	margin:0px;
+        }
+       
+       .hiddenMenu a{
+        
+         color:black;
+         text-decoration: none;
+       }
+	    .boxRadiuTopDiv{
+             border-radius: 6px!important;
+	    }
+	    .msgtable td{
+           padding:0 3px!important;     
+	    }
+	    .btndistance{
+	    	margin-left: 50px;
+	    }
+	    .middle{
+           text-align: center!important;
+	    }
+	     .middle input{
+        	background-color: #4d90fe;
+            color: white;
+            padding: 3px 8px;
+        }
+	    .msgtable td:last{
+          margin-left: 50px;   
+	    }
+	    .msgtable input[type="text"]{
+           width:60px;
+           height:18px;   
+           line-height: 18px;
+	    }
+	    .msgtable select{        
+           width:75px;
+           height:28px;   
+           line-height: 28px;
+	    }
+	     .hiddenMenu{
+         padding:2px 8px;
+         border-bottom: 1px solid #e5e5e5 !important;
+        }
+        .hiddenMenu div{
+         margin: 5px;
+        }
+        .iconHidden{
+        	z-index: -1000;
+        }
+        .fontSizeMap{
+          font-size: 24pt;
+        }
+         .hiddenMenu:hover{
+         cursor:pointer;
+         background-color:#e5e5e5;
+         }
+	    html, body, #map {
+	        height: 100%;
+	    }
+	    .hasmenu, .hasmenu2 {
+			border: 1px solid #008;
+			margin: 3px;
+			padding: 5px;
+			width: 30px;
+				}
+		.list{
+			width: 265px;
+			height:230px;
+			font-size: 15pt;
+	    }
+		.elsingle{
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-bottom-color: #96CDCD;
+		}
+		.ais-panel{
+		    margin: 2px;
+		    padding: 2px;
+		    border: 2px solid #119ed6;
+		}
+		
+		.dialog{
+			z-index: 100;
+			position:absolute;
+		}
+		#ais-table{
+    border: 1px solid #227ca1;
+}
+		.ais-table{
+		    text-align: center;
+		}
+		.ais-tp .ais-table{
+		    width: 100%;
+		}
+		.ais-table thead tr th{
+		    padding: 5px 3px;
+		    text-align: center;
+		    background-color: #d3e6ed;
+		    font-weight: bold;
+		    border-right: 1px solid #88a0aa;
+		}
+		.ais-table thead tr th:last-child{
+		    border-right: none;
+		}
+		.ais-table tbody tr:hover{
+		    background-color: #c7edfa;
+		}
+		.ais-table tbody tr.even:hover{
+		    background-color: #c7edfa;
+		}
+		.ais-table tbody tr td{
+		    padding: 4px 3px 3px 3px;
+		    border-bottom: 1px solid #e6e6e6;
+		    cursor: default;
+		}
+		.ais-table tbody tr.even{
+		     background-color: #ecf5fc;
+		 }
+		.ais-tp{
+		    padding-top: 1px;
+		    height: 288px;
+		    overflow: auto;
+		}
+		.leaflet-draw-tooltip {
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid;
+	color:black;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+    border-color:#68838B;
+	font: 12px/18px "Helvetica Neue", 宋体, Helvetica, sans-serif;
+	margin-left: 18px;
+	margin-top: -21px;
+	padding: 4px 8px;
+	position: absolute;
+	visibility: hidden;
+	white-space: nowrap;
+	z-index: 6;
+}
+.leaflet-draw-tooltip-single {
+	margin-top: -12px
+}
+.leaflet-draw-tooltip-subtext {
+	color: black;
+}
+.closeLine{
+	/*border-style: solid;
+	border-width: 1px;
+	-webkit-border-radius: 30px;
+	        border-radius: 30px;
+	    font-size: 15px;*/
+	    margin-left: 6px;
+	   
+	  /*  font-weight: 10px;*/
+	  }
+		

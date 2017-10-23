@@ -1,0 +1,43 @@
+<attach event="onmouseover" onevent="over()"/>
+<attach event="onmouseout" onevent="out()"/>
+<attach event="onmousedown" onevent="down()"/>
+<attach event="onmouseup" onevent="up()"/>
+<attach event="onfocus" onevent="getfocus()"/>
+<attach event="onblur" onevent="getblur()"/>
+<script language="Javascript">
+function over(){
+	style.backgroundImage="url(../images/16B/btn_normal_on.png)";
+	style.color="#2077a9";
+	style.borderColor="#3c7fb1";
+	style.borderWidth="1px";
+}
+
+function out(){
+	style.backgroundImage="url(../images/16B/btn_normal_off.png)";
+	style.color="#000000";
+	style.borderColor="#707070";
+	style.borderWidth="1px";
+
+}
+
+function down(){
+	style.borderColor="#3c7fb1";
+}
+
+function up(){
+	style.borderColor="#707070";
+}
+
+function getfocus(){
+	style.backgroundImage="url(../images/16B/btn_on.png)";
+	style.color="#2077a9";
+	style.borderColor="#3c7fb1";
+	style.borderWidth="1px";
+}
+function getblur(){
+	style.backgroundImage="url(../images/16B/btn_normal.png)";
+	style.borderColor="#707070";
+	style.color="#000000";
+	style.borderWidth="1px";
+}
+</script>

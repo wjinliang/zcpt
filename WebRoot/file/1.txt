@@ -1,0 +1,8 @@
+[
+		    			       	 "1|121.37|35.57|1420781805189|3410|6|0|TIANJIN@@@@@@@@@@@@@|10072200|||null|In Service/Commission|412687000|null|RONGTONG68@@@@@@@@@@|0|null",
+		    			       	 "1|125.51|34.39|1420781802770|0|0|0|TIANJIN@@@@@@@@@@@@@|10072200|-1||null|In Service/Commission|412687000|null|RONGTONG68@@@@@@@@@@|0|null",
+		    			       	 "1|123.90|32.65|1420781803253|0|1|0|TIANJIN@@@@@@@@@@@@@|10072200|-1||null|In Service/Commission|412687000|null|RONGTONG68@@@@@@@@@@|0|null",
+		    			       	 "1|126.23|31.95|1420781803818|1630|7|0|TIANJIN@@@@@@@@@@@@@|10072200|-1||null|In Service/Commission|412687000|null|RONGTONG68@@@@@@@@@@|0|null",
+		    			       	 "1|126.93|31.89|1420781803818|1630|7|0|TIANJIN@@@@@@@@@@@@@|10072200|-1||null|In Service/Commission|412687000|null|RONGTONG68@@@@@@@@@@|0|null",
+		    			       	 "1|127.04|30.65|1420781803818|1630|7|0|TIANJIN@@@@@@@@@@@@@|10072200|-1||null|In Service/Commission|412687000|null|RONGTONG68@@@@@@@@@@|0|null"
+		    			       	 ]

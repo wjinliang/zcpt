@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	color:#000000;
+	background-color: #FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+table,div,span,td,h1,h2,h3,h4,h5,h6{
+	font-size:12px;
+}
+form{
+	margin:0px;
+	}
+.tabTitle{
+	margin-top:50px;
+	margin-bottom:10px;
+	}
+.tdTitle{
+	text-align:center;
+	font-family:"黑体";
+	font-size:18px;
+	line-height:25px;
+	}
+.rptInputBl{
+	width:100%;
+	border:0px solid #FFFFFF;
+	border-bottom:1px solid #000000;
+	}
+.rptInputNormal{
+	width:100%;
+	border:0px solid #FFFFFF;
+	}
+.rptTabOut{
+	border:1px solid #000000;
+	border-collapse:collapse;
+	behavior:url(../css/16B/colorTable.htc);
+	}
+.rptTabOut td{
+	border:1px solid #b6beca;
+	text-align:center;
+	}
+.rptTabOut td input{
+	width:95%;
+	border:0px;
+	border-top:#7fb1e0 solid 1px;
+	border-left:#7fb1e0 solid 1px;
+	border-bottom:#7fb1e0 solid 1px;
+	border-right:#7fb1e0 solid 1px;
+	background:#e0f2ff;
+	behavior:url(../css/16B/input_text_rpt.htc);
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	}
+.tdNtop{
+	border-top:0px solid;
+	}
+.tdNbottom{
+	border-bottom:0px solid;
+	}
+.tdtleft{
+	text-align:left;
+	}
+.tdtright{
+	text-align:right;
+	}
+.rptInputNomarl{
+	width:95%;
+	border:0px;
+	}
+.rptInputNumb{
+	width:100%;
+	border:0px;
+	text-align:right;
+	}
+.tabBotOut{
+	margin-top:10px;
+	}
+.tabBotNotice{
+	font-size:14px;
+	line-height:18px;
+	height:25px;
+	}
+
+.thListNormal{
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#f0f8fc', endColorStr='#cee6f1', gradientType='0');
+	text-align:center;
+	vertical-align:middle;
+	color:#000000;
+	border-left:#DFDDCE solid 1px;
+	border-right:#DFDDCE solid 1px;
+	border-top:#DFDDCE solid 1px;
+	border-bottom:#6bb2d6 solid 1px;
+	background-color:#FFFFFF;
+}
+
+
+

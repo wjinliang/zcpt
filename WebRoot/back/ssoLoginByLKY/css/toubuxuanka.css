@@ -1,0 +1,113 @@
+.nav{height:auto; margin-bottom:10px; float:left;}
+.nav_top{height:66px; float:left;}
+.nav_top span{float:left;cursor:pointer;}
+
+.card_Off1{background:url(../images/bg_nav01_off.png) no-repeat; width:82px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:54px; font-weight:bold; float:left;}
+.card_Off01{background:url(../images/bg_nav01_on.png) no-repeat; width:82px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:54px; font-weight:bold; float:left;}
+.card_Off2{background:url(../images/bg_nav02_off.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off02{background:url(../images/bg_nav02_on.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off3{background:url(../images/bg_nav03_off.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off03{background:url(../images/bg_nav03_on.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off4{background:url(../images/bg_nav04_off.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off04{background:url(../images/bg_nav04_on.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off5{background:url(../images/bg_nav05_off.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off05{background:url(../images/bg_nav05_on.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off6{background:url(../images/bg_nav06_off.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off06{background:url(../images/bg_nav07_on.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off7{background:url(../images/bg_nav07_off.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.card_Off07{background:url(../images/bg_nav07_on.png) no-repeat; width:79px; height:66px; display:block; float:left; color:#FFF; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:65px; font-weight:bold; float:left;}
+.shbz{background:url(../images/shbz.png) no-repeat; width:151px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:106px; font-weight:bold; float:left;}
+.srfp{background:url(../images/srfp.png) no-repeat; width:151px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:106px; font-weight:bold; float:left;}
+.ldgx{background:url(../images/ldgx.png) no-repeat; width:120px; height:66px; display:block; float:left; color:#000; line-height:60px; font-size:16px; font-family:"΢���ź�"; padding-left:109px; font-weight:bold; float:left;}
+.nav_botm{
+float:left;
+height:auto!important;
+height:30px;
+min-height:30px;
+font-size:12px;
+margin-bottom:5px;
+line-height:30px;
+width:998px;
+position:absolute;
+left: 0px;
+top: 546px;
+_top: 544px;
+z-index:100;
+background:#fff9ef;
+border:1px solid #cfe6f9;
+}
+.kong{clear:both;width:0px;height:0px;overflow:hidden;}
+.nav_botm .xL_list{
+float:left;
+_width:983px;
+position:relative;
+z-index:0;
+padding-left:15px;
+}
+.nav_botm .xL_list li{
+float:left;
+display:block;
+min-width:100px;
+color:#CCC;
+text-align:center;
+font-size:12px;
+font-family:"΢���ź�";
+_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>100?"100px":"");
+}
+.nav_botm .xL_list .w1{
+min-width:1px;
+_width:1px;
+height:12px;
+float:left;
+}
+.nav_botm .xL_list li a{
+float:left;
+display:block;
+min-width:100px;
+color:#757575;
+text-align:center;
+font-size:12px;
+font-family:"΢���ź�";
+_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>100?"100px":"");
+}
+.nav_botm .xL_list li .ChangZi{
+min-width:200px;
+_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>200?"200px":"");
+}
+.nav_botm .xL_list li a:hover{
+color:#0a3666;
+font-weight:bold;
+}
+.nav_botm .xL_list .ChangZi{
+min-width:200px;
+_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>200?"200px":"");
+}
+.xL_list .nav1{
+width:710px;
+height:28px;
+position:absolute;
+left: 180px;
+top: 18px;
+color:#545353;
+background:#fff9ef;
+z-index:999;
+border:1px solid #f2b74f;
+display:none;
+}
+.nav_botm .xL_list .nav1 .lan{
+float:left;
+display:block;
+color:#f48c0f;
+text-align:center;
+font-size:12px;
+font-family:"΢���ź�";
+min-width:80px;
+_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>80?"80px":"");
+}
+.nav_botm .xL_list .nav1 .chang{
+min-width:100px;
+_width:expression((document.documentElement.clientWidth||document.body.clientWidth)>100?"100px":"");
+}
+.nav_botm .xL_list .nav1 .lan:hover{
+color:#f48c0f;
+}

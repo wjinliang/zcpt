@@ -1,0 +1,49 @@
+﻿/*==================== 首页 ===========================*/
+/*banner*/
+.banner{position:relative;z-index:1;width:960px;height:462px; margin:0 auto; overflow:hidden; }
+.banner ul {height:462px;position:absolute;}
+.banner ul li {float:left; width:960px; height:462px;overflow:hidden;position:relative;}
+.banner_0{width:100%; height:462px; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/banner_0-bg.png) repeat-x bottom;}
+.banner ul li div {position:absolute;overflow:hidden;}
+.banner .preNext {width:25px;height:92px;position:absolute;top:125px;background: url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/banner_arrow.png) no-repeat 0 0; cursor:pointer;}
+.banner .pre {left:0;}
+.banner .next {right:0;background-position:right top;}
+
+a.banner_0_more{ position: absolute; z-index:2; left:430px;top:215px; display:block;width:110px;height:37px;}
+a.banner_0_more:hover{ opacity:0.9;filter:alpha(opacity=90);}
+/*banner*/
+
+/*公司新闻*/
+.index_news_wrap{width:100%;height:41px;background: url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/index_news_bg.png) repeat-x;}
+.index_news{width:960px;margin:0 auto;}
+.index_news h3{ float:left;width:90px;height:41px; line-height:41px; padding:0 20px 0 0; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/index_news_h3.png) no-repeat right top; color:#fff; text-align:right; font-size:16px; font-weight:normal;}
+.index_news a{ color:#fff;}
+.index_news a.sina_icon{ float:right; display:block;width:30px;height:30px;margin:6px 0 0 0; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/sina_icon.png) no-repeat;}
+.index_news_scroll{ float:left;padding:0 0 0 10px;width:660px;height:41px; line-height:41px; overflow:hidden;}
+.index_news_scroll li{}
+/*公司新闻*/
+
+/*行业应用频道*/
+.index_channel{ display:block; width:960px;margin:0 auto; height:86px;background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/index_channel_bg.png) no-repeat bottom; text-align:center;}
+.index_channel dl{  display:inline-block;*display:inline;*zoom:1;vertical-align:top;cursor:pointer; width:90px; height:68px; margin:10px 0 0 0; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/index_channel_text_bg.png) no-repeat center bottom; text-align:center; overflow:hidden;} 
+.index_channel dt{width:48px;height:48px;margin:0 auto; overflow:hidden;}
+.index_channel dd{width:48px;height:20px;margin:0 auto;line-height:20px; vertical-align:top;font-size:12px;overflow:hidden;}
+/*行业应用频道*/
+
+/*热点新闻*/
+.index_hot_news{ width:960px;height:100px;margin:0 auto 15px auto; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/news_topbg.png) no-repeat top center;}
+.index_hot_news_mod{position:relative; float:left; width:313px;height:100px; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/hot_news_bg.png) no-repeat -1px bottom; border-left:1px solid #dadada;border-right:1px solid #dadada;}
+.index_hot_news_mod dl{padding:10px 10px 0 7px;}
+.index_hot_news_mod dt{ float:left;margin:0 12px 0 0;_margin:0 9px 0 0;padding:3px 0 0 0; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/hot_news_pic_bg.png) no-repeat center top;}
+.index_hot_news_mod dd{line-height:20px;}
+.index_hot_news_mod h2 {margin:0 0 7px 0;}
+.index_hot_news_mod h2 a{color:#00479d;font-size:16px;}
+
+.hot_news_icon_new{ position:absolute; z-index:2; left:-6px;top:0;width:31px;height:45px; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/hot_news_icon_new.png) no-repeat;}
+.mr{margin-right:7px;}
+
+/*热点新闻*/
+/*==================== 首页 ===========================*/
+/*** New 2013-04-16 ***/
+.index_news a.tencent_icon{ float:right; display:block;width:30px;height:30px;margin:6px 0 0 5px; background:url(../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/tencent_weibo.png) no-repeat;}
+.weibo_gz{color:#fff; line-height:41px; float:right;}
