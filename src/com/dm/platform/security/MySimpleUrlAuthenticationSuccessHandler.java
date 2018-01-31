@@ -67,6 +67,7 @@ public class MySimpleUrlAuthenticationSuccessHandler implements AuthenticationSu
             return;  
         }  
         session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);  
+		session.setAttribute(MyUsernamePasswordAuthenticationFilter.VALIDATE_CODE, null);
     }  
    
     public void setRedirectStrategy(RedirectStrategy redirectStrategy) {  

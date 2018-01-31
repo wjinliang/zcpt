@@ -55,13 +55,12 @@ public class MyUsernamePasswordAuthenticationFilter extends
 		HttpSession session = request.getSession();
 		Object obj = session.getAttribute(VALIDATE_CODE);
 		if(obj!=null){
-		String sessionValidateCode = obtainSessionValidateCode(session);
-		session.setAttribute(VALIDATE_CODE, null);
-		String validateCodeParameter = obtainValidateCodeParameter(request);
-		if (StringUtils.isEmpty(validateCodeParameter)
-				|| !sessionValidateCode.equalsIgnoreCase(validateCodeParameter)) {
-			throw new AuthenticationServiceException("验证码错误！");
-		}
+			String sessionValidateCode = obtainSessionValidateCode(session);
+			String validateCodeParameter = obtainValidateCodeParameter(request);
+			if (StringUtils.isEmpty(validateCodeParameter)
+					|| !sessionValidateCode.equalsIgnoreCase(validateCodeParameter)) {
+				throw new AuthenticationServiceException("验证码错误！");
+			}
 		}
 	}
 

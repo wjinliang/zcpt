@@ -81,14 +81,14 @@
 			<value>com.mysql.jdbc.Driver</value>
 		</property>
 		<property name="jdbcUrl">
-			 <value>jdbc:mysql://127.0.0.1:3306/zcpt?useUnicode=true&amp;characterEncoding=utf-8</value><!-- 
+			 <value>jdbc:mysql://127.0.0.1:3306/topie_zcpt?useUnicode=true&amp;characterEncoding=utf-8</value><!-- 
 			<value>jdbc:mysql://101.200.234.44:3306/zcpt?useUnicode=true&amp;characterEncoding=utf-8</value> -->
 		</property>
 		<property name="user">
 			<value>root</value>
 		</property>
 		<property name="password">
-			<value>123456</value>
+			<value>root</value>
 		</property>
 		<property name="initialPoolSize">
 			<value>5</value>

@@ -45,6 +45,8 @@ public class MySimpleUrlAuthenticationFailureHandler implements
 		 * 次数限制
 		 */
 		HttpSession session = request.getSession();
+
+		session.setAttribute(MyUsernamePasswordAuthenticationFilter.VALIDATE_CODE, Math.random());
 		if (exception.getMessage().equals("密码不正确")) {
 			String name = request
 					.getParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY);

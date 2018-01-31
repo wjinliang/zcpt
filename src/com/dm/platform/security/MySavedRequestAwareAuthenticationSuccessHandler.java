@@ -60,6 +60,7 @@ public class MySavedRequestAwareAuthenticationSuccessHandler extends SimpleUrlAu
  		userAccountService.updateUser(user);
  		//清除最大尝试次数
  		request.getSession().removeAttribute(user.getLoginname()+"_tryMaxCount");
+        request.getSession().removeAttribute(MyUsernamePasswordAuthenticationFilter.VALIDATE_CODE);
     	SavedRequest savedRequest = requestCache.getRequest(request, response);  
         if (savedRequest == null) {  
             //用户判断是否要使用上次通过session里缓存的回调URL地址  

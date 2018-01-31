@@ -139,14 +139,45 @@ public class OrgAndUserServiceImpl implements OrgAndUserService {
 	@Override
 	public Long countUser(String orgid, String systemId, String name) {
 		String hql = "select count(loginname) from UserAccount u where u.delete=false";
-		if (orgid != null && !orgid.equals("")) {
-			hql += " and u.org.id =" + orgid;
-		}
+		
 		if (systemId != null&& !systemId.equals("all")) {
 			hql += " and u.systemId = '" + systemId+"'";
 		}
 		if (name != null && !name.equals("")) {
 			hql += " and u.name like '%" + name + "%'";
+			Division division = UserAccountUtil.getInstance().getCurrentUserAccountOrgDivision();
+			if(division!=null){
+				String dCode = division.getCode();
+				String type = division.getType();
+				int end = 0;
+				switch (type) {
+					case "0"://中央
+						break;
+					case "1"://省级 
+					case "2"://直辖市 
+					case "3"://计划单列市 
+						end = 2;
+						if(dCode.length()>=end)
+							hql += " and u.loginname like '" + dCode.substring(0,end) + "%'";
+						break;
+					case "4"://市级 
+						end = 4;
+						if(dCode.length()>=end)
+							hql += " and u.loginname like '" + dCode.substring(0,end) + "%'";
+						break;
+					case "5"://区县 
+					case "6"://乡镇 
+					case "7"://村 
+						end = 6;
+						if(dCode.length()>=end)
+							hql += " and u.loginname like '" + dCode.substring(0,end) + "%'";
+						break;
+					default:
+						break;
+				}
+			}
+		}else if (orgid != null && !orgid.equals("")) {
+			hql += " and u.org.id =" + orgid;
 		}
 		return this.commonDAO.count(hql);
 	}
@@ -155,15 +186,46 @@ public class OrgAndUserServiceImpl implements OrgAndUserService {
 	public List<UserAccount> listUsers(String orgid, String systemId,
 			String name, Integer thispage, Integer pagesize) {
 		String hql = " from UserAccount u where u.delete=false";//--20161013用户假删除
-		if (orgid != null && !orgid.equals("")) {
-			hql += " and u.org.id =" + orgid;
-		} 
 		if (systemId != null&& !systemId.equals("all")) {
 			hql += " and u.systemId = '" + systemId+"'";
 		}
 		if (name != null && !name.equals("")) {
 			hql += " and u.name like '%" + name + "%'";
+			Division division = UserAccountUtil.getInstance().getCurrentUserAccountOrgDivision();
+			if(division!=null){
+				String dCode = division.getCode();
+				String type = division.getType();
+				int end = 0;
+				switch (type) {
+					case "0"://中央
+						break;
+					case "1"://省级 
+					case "2"://直辖市 
+					case "3"://计划单列市 
+						end = 2;
+						if(dCode.length()>=end)
+							hql += " and u.loginname like '" + dCode.substring(0,end) + "%'";
+						break;
+					case "4"://市级 
+						end = 4;
+						if(dCode.length()>=end)
+							hql += " and u.loginname like '" + dCode.substring(0,end) + "%'";
+						break;
+					case "5"://区县 
+					case "6"://乡镇 
+					case "7"://村 
+						end = 6;
+						if(dCode.length()>=end)
+							hql += " and u.loginname like '" + dCode.substring(0,end) + "%'";
+						break;
+					default:
+						break;
+				}
+			}
 		}
+		else if (orgid != null && !orgid.equals("")) {
+			hql += " and u.org.id =" + orgid;
+		} 
 		return this.commonDAO.findByPage(hql, thispage, pagesize);
 	}
 

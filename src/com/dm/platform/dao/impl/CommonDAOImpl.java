@@ -489,7 +489,7 @@ public class CommonDAOImpl extends HibernateDaoSupport implements CommonDAO {
 	@Override
 	public <T> Long count(final String queryString) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute( new HibernateCallback () {
+		return (Long) this.getHibernateTemplate().execute( new HibernateCallback () {
 			 public Object doInHibernate ( Session session ) throws HibernateException, SQLException {
 				 Query query = session.createQuery(queryString);
 				 Long count = (Long) query.uniqueResult();
@@ -502,7 +502,7 @@ public class CommonDAOImpl extends HibernateDaoSupport implements CommonDAO {
 	@Override
 	public <T> String  max(final String queryString) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute( new HibernateCallback () {
+		return (String) this.getHibernateTemplate().execute( new HibernateCallback () {
 			 public Object doInHibernate ( Session session ) throws HibernateException, SQLException {
 				 Query query = session.createQuery(queryString);
 				 String count = (String) query.uniqueResult();
@@ -515,7 +515,7 @@ public class CommonDAOImpl extends HibernateDaoSupport implements CommonDAO {
 	@Override
 	public <T> Long count(final String queryString,final String parameter,final Object[] objects) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute( new HibernateCallback () {
+		return (Long) this.getHibernateTemplate().execute( new HibernateCallback () {
 			 public Object doInHibernate ( Session session ) throws HibernateException, SQLException {
 				 Query query = session.createQuery(queryString);
 				 query.setParameterList(parameter, objects);
@@ -529,7 +529,7 @@ public class CommonDAOImpl extends HibernateDaoSupport implements CommonDAO {
 	@Override
 	public <T> Long count(final String queryString,final Map argsMap) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute( new HibernateCallback () {
+		return (Long) this.getHibernateTemplate().execute( new HibernateCallback () {
 			 public Object doInHibernate ( Session session ) throws HibernateException, SQLException {
 				 Query query = session.createQuery(queryString);
 				 query.setProperties(argsMap);
@@ -545,7 +545,7 @@ public class CommonDAOImpl extends HibernateDaoSupport implements CommonDAO {
 			final T entity) {
 		// TODO Auto-generated method stub
 		
-		return this.getHibernateTemplate().execute( new HibernateCallback () {
+		return (Long) this.getHibernateTemplate().execute( new HibernateCallback () {
 			 public Object doInHibernate ( Session session ) throws HibernateException, SQLException {
 				 String sqlQuery = "select count(*) from " + entityClass.getName()
 							+ " t where 1=1 ";

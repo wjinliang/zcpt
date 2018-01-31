@@ -24,7 +24,7 @@ public class MyUserDetailServiceImpl implements UserDetailsService{
         if(users.size()>0){
         	user=users.get(0);
         }else{
-        	throw new UsernameNotFoundException("用户名不存在！");
+        	throw new UsernameNotFoundException("用户名或密码错误！");
         }  
         return user;
 	}

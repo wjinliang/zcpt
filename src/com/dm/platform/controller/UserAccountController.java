@@ -209,7 +209,7 @@ public class UserAccountController extends DefaultController {
 		SynUtil syn = new SynUtil();
 		String jigouRoleId = syn.getSynInfo("zzjgRoleId");
 			UserAccount ua = new UserAccount();
-			if (mode != null && !mode.equals("new")) {
+			if (mode != null && !mode.equals("new")) {//编辑
 				if (useraccountid != null) {
 					ua = userAccountService.findOne(useraccountid);
 					Set<UserRole> set =  ua.getRoles();
@@ -220,12 +220,12 @@ public class UserAccountController extends DefaultController {
 						}
 					}
 					model.addObject("useraccount", ua);
-					if (mode.equals("view")) {
+					if (mode.equals("view")) {//查看
 						model.setViewName("/pages/admin/useraccount/view");
 						return Model(model);
 					}
 				}
-			} else {
+			} else {//新增
 				if (orgid != null && !orgid.equals("")) {
 					/*ua.setSeq(commonDAO
 							.count("select count(loginname) from UserAccount u where u.org.id="

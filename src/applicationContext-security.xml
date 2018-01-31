@@ -58,17 +58,17 @@
 		class="org.springframework.security.core.session.SessionRegistryImpl" />
 
  <!-- ajax -->
-    <bean id="ajaxLoginFilter"
+    <!-- <bean id="ajaxLoginFilter"
           class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
         <property name="sessionAuthenticationStrategy" ref="sessionAuthenticationStrategy"/>
         <property name="authenticationManager" ref="authenticationManager"/>
-        <!-- 验证失败后的处理 -->
+        验证失败后的处理
         <property name="authenticationFailureHandler" ref="ajaxFailureHandler"/>
-        <!-- 验证成功后的处理 -->
+        验证成功后的处理
         <property name="authenticationSuccessHandler" ref="ajaxSuccessHandler"/>
-        <!-- 处理登录的action -->
+        处理登录的action
         <property name="filterProcessesUrl" value="/ajaxLoginProcess"/>
-        <!-- 记住密码 -->
+        记住密码
         <property name="rememberMeServices" ref="rememberMeServices"></property>
     </bean>
     <bean id="ajaxFailureHandler"
@@ -76,7 +76,7 @@
     </bean>
     <bean id="ajaxSuccessHandler"
           class="com.dm.platform.security.AjaxAuthenticationSuccessHandler">
-    </bean>
+    </bean> -->
     <!-- ajax end -->
 
 	<!-- 登录验证器 -->
@@ -96,8 +96,12 @@
 	<bean id="loginLogAuthenticationSuccessHandler"
 		class="com.dm.platform.security.MySavedRequestAwareAuthenticationSuccessHandler">
 	</bean>
-	<bean id="simpleUrlAuthenticationFailureHandler"
+	<!-- <bean id="simpleUrlAuthenticationFailureHandler"
 		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<property name="defaultFailureUrl" value="/login?error=true"></property>
+	</bean> -->
+	<bean id="simpleUrlAuthenticationFailureHandler"
+		class="com.dm.platform.security.MySimpleUrlAuthenticationFailureHandler">
 		<property name="defaultFailureUrl" value="/login?error=true"></property>
 	</bean>
 
